@@ -1,25 +1,25 @@
 // Dummy data for school information
 const schoolData = {
     sunshine: {
-        name: "Sunshine Elementary",
+        name: "R.C. Patel Secondary School",
         position: "Elementary School Teacher",
-        salaryRange: "$40,000 - $60,000",
-        location: "Springfield, IL",
+        salaryRange: "RS. 40,000 - 60,000",
+        location: "Shirpur, IN",
         description: "We are seeking passionate elementary school teachers to join our team at Sunshine Elementary. The ideal candidate should have experience in creating engaging lesson plans and fostering a positive learning environment for young students."
     },
     evergreen: {
-        name: "Evergreen High School",
-        position: "High School Math Teacher",
-        salaryRange: "$50,000 - $75,000",
-        location: "Greenville, OH",
-        description: "Evergreen High School is looking for an experienced high school math teacher. The successful candidate will be responsible for teaching various math subjects, including Algebra, Geometry, and Calculus."
+        name: "R.C. Patel Polytechnic",
+        position: "Assistant Professor of Python",
+        salaryRange: "Rs. 50,000 - 75,000",
+        location: "Dhule, IN",
+        description: "R.C. Patel Polytechnic is looking for an experienced high school Python programming teacher. The successful candidate will be responsible for teaching Python programming and other foundational computer science concepts to students."
     },
     oakwood: {
-        name: "Oakwood University",
+        name: "R.C. Patel Institute of Technology",
         position: "Assistant Professor of Computer Science",
-        salaryRange: "$70,000 - $90,000",
-        location: "Oakville, CA",
-        description: "Oakwood University is seeking an Assistant Professor of Computer Science to join our growing department. The ideal candidate should have a Ph.D. in Computer Science or a related field and be passionate about teaching and research."
+        salaryRange: "Rs. 70,000 - 90,000",
+        location: "Shirpur, IN",
+        description: "R.C. Patel Institute of Technology is seeking an Assistant Professor of Computer Science to join our growing department. The ideal candidate should have a Ph.D. in Computer Science or a related field and be passionate about teaching and research."
     }
 };
 
@@ -73,7 +73,7 @@ if (school &&
         <p><strong>Description:</strong> ${data.description}</p>
     `;
 } else {
-    schoolInfo.innerHTML = '<p>School information not found.</p>';
+    schoolInfo.innerHTML = '<p>R.C. Patel</p>';
 }
 
 // Handle job application form submission
