@@ -1,10 +1,8 @@
-const jwt = require("jsonwebtoken");
-require("dotenv").config();
+import { jwtVerify } from "jose";
 
-exports.auth = async (req, res, next) => {
+export const auth = async (req, res, next) => {
     try {
-        
-        const token = req.cookies?.token;
+        const token = req.cookies?.token; // Extract token from cookies
         if (!token) {
             return res.status(401).json({
                 success: false,
@@ -13,9 +11,12 @@ exports.auth = async (req, res, next) => {
         }
 
         try {
-            const payload = jwt.verify(token, process.env.JWT_SECRET);
-            req.user = payload; 
-            next(); 
+            const secret = new TextEncoder().encode(process.env.JWT_SECRET); // Use the secret key from environment variables
+
+            // Verify the token using jose
+            const { payload } = await jwtVerify(token, secret);
+            req.user = payload; // Attach the payload to the request
+            next(); // Proceed to the next middleware
         } catch (error) {
             console.error("Token verification error:", error);
             return res.status(401).json({
