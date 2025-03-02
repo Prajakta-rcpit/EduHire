@@ -1,8 +1,5 @@
-import jwt from "jsonwebtoken";
-import dotenv from "dotenv";
-
-dotenv.config();
-
+const jwt = require("jsonwebtoken");
+require("dotenv").config();
 
 exports.auth = async (req, res, next) => {
     try {
